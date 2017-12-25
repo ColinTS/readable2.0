@@ -10,3 +10,11 @@ export const getCategories = () => {
     .then((res) => res.json())
     .then((data) => data.categories);
 };
+
+export const getPosts = (categoryName) => {
+  return fetch(`http://localhost:5001/${categoryName}/posts`, {
+    headers: { Authorization: token },
+  })
+    .then((res) => res.json())
+    .then(data => data)
+}

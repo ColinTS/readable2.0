@@ -7,7 +7,7 @@ function Category({ categories }) {
   return (
     <div>
     {categories && categories.map((category)=>
-      <Spacer>
+      <Spacer key={`spacer${category.name}`}>
        <Link key={category.name} to={`/categories/${category.name}`}>{category.name}</Link>
       </Spacer>
     )}

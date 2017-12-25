@@ -10,7 +10,6 @@ export function LoadCategoriesAction() {
 }
 
 export function LoadCategoriesSuccessAction(categories) {
-  console.log('CATS',categories)
   return {
     type: LOAD_CATEGORIES_SUCCESS,
     categories
